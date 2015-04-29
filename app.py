@@ -10,8 +10,9 @@ import sqlite3
 app = Flask(__name__)
 
 # config
-app.secret_key = 'my precious'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+import os
+app.config.from_object(os.environ['APP_SETTINGS'])
+
 
 # create the sqlalchemy object
 db = SQLAlchemy(app)
