@@ -7,6 +7,7 @@ class BaseConfig(object):
     DEBUG = False
     SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
     # SQLALCHEMY_DATABASE_URI = 'sqlite:///posts.db'
+    # print SQLALCHEMY_DATABASE_URI
 
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
