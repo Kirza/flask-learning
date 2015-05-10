@@ -1,74 +1,258 @@
-<link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4 col-md-4">
-            <div class="post">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive" />
-                    <span class="post-title"><b>Make a Image Blur Effects With</b><br />
-                        <b>CSS3 Blur</b></span>
-                </div>
-                <div class="content">
-                    <div class="author">
-                        By <b>Bhaumik</b> |
-                        <time datetime="2014-01-20">January 20th, 2014</time>
-                    </div>
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="http://www.jquery2dotnet.com/2014/01/jquery-highlight-table-row-and-column.html" class="btn btn-warning btn-sm">Read more</a>
-                    </div>
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="static/css/style.css" rel="stylesheet" media="screen">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rupor</title>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<!-- start:header -->
+	<div id="header">
+		<div class="overlay">
+			<!-- start:header-top -->
+      <div class="header-top">
+        <div class="text-center">
+          <div class="sosmed-header-top">
+            <a href="#"><i class="fa fa-vk" data-toggle="tooltip" data-placement="bottom" title="Vkontakte"></i></a>
+            <a href="#"><i class="fa fa-twitter" data-toggle="tooltip" data-placement="bottom" title="Twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus" data-toggle="tooltip" data-placement="bottom" title="Google Plus"></i></a>
+            <a href="#"><i class="fa fa-youtube" data-toggle="tooltip" data-placement="bottom" title="Youtube"></i></a>
+          </div>
         </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/2980b9/ffffff&text=CSS3" class="img-responsive" />
-                    <span class="post-title"><b>Make a Image Blur Effects With</b><br />
-                        <b>CSS3 Blur</b></span>
-                </div>
-                <div class="content">
-                    <div class="author">
-                        By <b>Bhaumik</b> |
-                        <time datetime="2014-01-20">January 20th, 2014</time>
-                    </div>
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="http://www.jquery2dotnet.com/2013/11/share-social-media-round-buttons.html" class="btn btn-primary btn-sm">Read more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <div class="post">
-                <div class="post-img-content">
-                    <img src="http://placehold.it/460x250/47A447/ffffff&text=jQuery" class="img-responsive" />
-                    <span class="post-title"><b>Make a Image Blur Effects With</b><br />
-                        <b>CSS3 Blur</b></span>
-                </div>
-                <div class="content">
-                    <div class="author">
-                        By <b>Bhaumik</b> |
-                        <time datetime="2014-01-20">January 20th, 2014</time>
-                    </div>
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    <div>
-                        <a href="http://www.jquery2dotnet.com/2013/07/cool-social-sharing-button-using-css3.html" class="btn btn-success btn-sm">Read more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div>
+			<!-- end:header-top -->
+		</div>
+	</div>
+
+	<!-- end:header -->
+
+	<!-- start:navbar -->
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><strong><i class="fa fa-bullhorn "></i> RUPOR</strong></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">HOME</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+				      	<input type="text" class="form-control" placeholder="Введите email">
+				      	<span class="input-group-btn">
+				        	<button class="btn btn-warning" type="button">Подписаться</button>
+				      	</span>
+				    </div>
+				</form>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+	<!-- end:navbar -->
+
+	<!-- start:main -->
+	<div id="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12">
+					<!-- start:content -->
+					<div id="content">
+						<div class="row">
+							<div class="col-lg-4 col-md-4">
+								<aside>
+									<img src="static/content/thumbnail1.jpg" class="img-responsive">
+									<div class="content-title">
+										<div class="text-center">
+											<h3><a href="single.html">Сергей Кургинян. Уступанты и оккупанты - ИА Regnum</a></h3>
+										</div>
+									</div>
+									<div class="content-footer">
+										<span>Admin</span>
+										<span class="pull-right">
+											<a href="#"><i class="fa fa-comments" data-toggle="tooltip" data-placement="top" title="Comments"></i> 30</a>
+											<a href="#"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Loved"></i> 20</a>
+										</span>
+									</div>
+								</aside>
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<aside>
+									<img src="static/content/thumbnail2.jpg" class="img-responsive">
+									<div class="content-title">
+										<div class="text-center">
+											<h3><a href="single.html">Стрелков предрек конец перемирия в Донбассе</a></h3>
+										</div>
+									</div>
+									<div class="content-footer">
+										<span>Admin</span>
+										<span class="pull-right">
+											<a href="#"><i class="fa fa-comments" data-toggle="tooltip" data-placement="top" title="Comments"></i> 30</a>
+											<a href="#"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Loved"></i> 20</a>
+										</span>
+									</div>
+								</aside>
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<aside>
+									<img src="static/content/thumbnail3.jpg" class="img-responsive">
+									<div class="content-title">
+										<div class="text-center">
+											<h3><a href="single.html">Кургинян: На Украине бандеровцы вторглись в мирную жизнь растерянных людей</a></h3>
+										</div>
+									</div>
+									<div class="content-footer">
+										<span>Admin</span>
+										<span class="pull-right">
+											<a href="#"><i class="fa fa-comments" data-toggle="tooltip" data-placement="top" title="Comments"></i> 30</a>
+											<a href="#"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Loved"></i> 20</a>
+										</span>
+									</div>
+								</aside>
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<aside>
+									<img src="static/content/thumbnail4.jpg" class="img-responsive">
+									<div class="content-title">
+										<div class="text-center">
+											<h3><a href="single.html">Изображение для результатов поиска в новостях Путин возглавил полумиллионный "Бессмертный полк"</a></h3>
+										</div>
+									</div>
+									<div class="content-footer">
+										<span>Admin</span>
+										<span class="pull-right">
+											<a href="#"><i class="fa fa-comments" data-toggle="tooltip" data-placement="top" title="Comments"></i> 30</a>
+											<a href="#"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Loved"></i> 20</a>
+										</span>
+									</div>
+								</aside>
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<aside>
+									<img src="static/content/thumbnail5.jpg" class="img-responsive">
+									<div class="content-title">
+										<div class="text-center">
+											<h3><a href="single.html">Путин уволил 18 генералов </a></h3>
+										</div>
+									</div>
+									<div class="content-footer">
+										<span>Admin</span>
+										<span class="pull-right">
+											<a href="#"><i class="fa fa-comments" data-toggle="tooltip" data-placement="top" title="Comments"></i> 30</a>
+											<a href="#"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Loved"></i> 20</a>
+										</span>
+									</div>
+								</aside>
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<aside>
+									<img src="static/content/thumbnail6.jpg" class="img-responsive">
+									<div class="content-title">
+										<div class="text-center">
+											<h3><a href="single.html">Обама: США продолжат добиваться от КНР повышения курса китайской национальной валюты</a></h3>
+										</div>
+									</div>
+									<div class="content-footer">
+										<span>Admin</span>
+										<span class="pull-right">
+											<a href="#"><i class="fa fa-comments" data-toggle="tooltip" data-placement="top" title="Comments"></i> 30</a>
+											<a href="#"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Loved"></i> 20</a>
+										</span>
+									</div>
+								</aside>
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<aside>
+									<img src="static/content/thumbnail7.jpg" class="img-responsive">
+									<div class="content-title">
+										<div class="text-center">
+											<h3><a href="single.html">Тест 7</a></h3>
+										</div>
+									</div>
+									<div class="content-footer">
+										<span>Admin</span>
+										<span class="pull-right">
+											<a href="#"><i class="fa fa-comments" data-toggle="tooltip" data-placement="top" title="Comments"></i> 30</a>
+											<a href="#"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Loved"></i> 20</a>
+										</span>
+									</div>
+								</aside>
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<aside>
+									<img src="static/content/thumbnail8.jpg" class="img-responsive">
+									<div class="content-title">
+										<div class="text-center">
+											<h3><a href="single.html">Тест 8</a></h3>
+										</div>
+									</div>
+									<div class="content-footer">
+										<span>Admin</span>
+										<span class="pull-right">
+											<a href="#"><i class="fa fa-comments" data-toggle="tooltip" data-placement="top" title="Comments"></i> 30</a>
+											<a href="#"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Loved"></i> 20</a>
+										</span>
+									</div>
+								</aside>
+							</div>
+							<div class="col-lg-12 col-md-12">
+								<div class="text-center">
+									<ul class="pagination">
+									  	<li><a href="#">&laquo;</a></li>
+									  	<li><a href="#">1</a></li>
+									  	<li><a href="#">2</a></li>
+									  	<li><a href="#">3</a></li>
+									  	<li><a href="#">4</a></li>
+									  	<li><a href="#">5</a></li>
+									  	<li><a href="#">&raquo;</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end:content -->
+				</div>
+		</div>
+	</div>
+	<!-- end:main -->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="widget-footer">
+
+						<div class="sosmed-footer">
+							<a href="#"><i class="fa fa-vk" data-toggle="tooltip" data-placement="top" title="Vkontakte"></i></a>
+							<a href="#"><i class="fa fa-twitter" data-toggle="tooltip" data-placement="top" title="Twitter"></i></a>
+							<a href="#"><i class="fa fa-google-plus" data-toggle="tooltip" data-placement="top" title="Google-Plus"></i></a>
+							<a href="#"><i class="fa fa-youtube" data-toggle="tooltip" data-placement="top" title="Youtube"></i></a>
+
+						</div>
+					</div>
+				</div>
+
+
+	</div>
 </div>
+
+</body>
+</html>
