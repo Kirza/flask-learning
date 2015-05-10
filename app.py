@@ -40,7 +40,6 @@ def home():
     return render_template('index.html', posts=posts)  # render a template
 
 @app.route('/blog')
-@login_required
 def blog():
     return render_template('blog.html')  # render a template
 
