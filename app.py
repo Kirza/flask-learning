@@ -40,12 +40,14 @@ def home():
     return render_template('index.html', posts=posts)  # render a template
 
 @app.route('/blog')
+@login_required
 def blog():
     return render_template('blog.html')  # render a template
 
 
 
 @app.route('/welcome')
+@login_required
 def welcome():
     return render_template('welcome.html')  # render a template
 
@@ -55,7 +57,7 @@ def welcome():
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != 'essenseoftime' or request.form['password'] != 'plz1let2me3in4':
+        if request.form['username'] != 'showmewebpage' or request.form['password'] != 'plz1let2me3in4':
             error = 'Invalid Credentials. Please try again.'
         else:
             session['logged_in'] = True
