@@ -1,0 +1,25 @@
+<link href="static/css/login.css" rel="stylesheet" media="screen">
+{% extends "base.html" %}
+{% block content %}
+
+
+  <div class="col-md-4 col-lg-4"></div>
+  <div class="wrapper col-md-4 col-lg-4">
+    <form class="form-signin">
+      <a href="http://www.rupor.press/blog">
+         <button class="btn btn-lg btn-warning btn-block" type="button">Макет главной страницы</button>
+      </a>
+      {% if error %}
+        <p class="error"><center><strong>Error:</strong> {{ error }}</center></p>
+      {% endif %}
+      {% for message in get_flashed_messages() %}
+        <center>
+          {{ message }}
+        </center>
+      {% endfor %}
+    </form>
+  </div>
+  <div class="col-md-4 col-lg-4"></div>
+
+
+{% endblock %}

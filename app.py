@@ -47,6 +47,11 @@ def blog():
     return render_template('blog.html')  # render a template
 
 
+@app.route('/preview')
+@login_required
+def preview():
+    return render_template('preview.html')  # render a template
+
 
 @app.route('/welcome')
 @login_required
@@ -59,12 +64,12 @@ def welcome():
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != 'showmewebpage' or request.form['password'] != 'plz1let2me3in4':
+        if request.form['username'] != 'webpage' or request.form['password'] != 'letmein':
             error = 'Invalid Credentials. Please try again.'
         else:
             session['logged_in'] = True
             flash('You were just logged in!')
-            return redirect(url_for('home'))
+            return redirect(url_for('preview'))
     return render_template('login.html', error=error)
 
 
