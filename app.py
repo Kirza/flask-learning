@@ -46,6 +46,14 @@ def home():
 def blog():
     return render_template('blog.html')  # render a template
 
+@app.route('/post')
+def post():
+    return render_template('post.html')  # render a template
+
+@app.route('/blog2')
+@login_required
+def blog2():
+    return render_template('blog2.html')  # render a template
 
 @app.route('/preview')
 @login_required
