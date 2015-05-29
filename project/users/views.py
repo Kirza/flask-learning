@@ -35,7 +35,7 @@ def login():
                 user.password, request.form['password']):
                 login_user(user)
                 flash('You were logged in. Go Crazy.')
-                return redirect(url_for('home.home'))
+                return redirect(url_for('home.preview'))
 
             else:
                 error = 'Invalid username or password.'

@@ -48,3 +48,15 @@ def home():
 @home_blueprint.route('/welcome')
 def welcome():
     return render_template('welcome.html')  # render a template
+
+
+@home_blueprint.route('/preview')
+@login_required
+def preview():
+    return render_template('preview.html')  # render a template
+
+
+@home_blueprint.route('/blog')
+@login_required
+def blog():
+    return render_template('blog.html')  # render a template

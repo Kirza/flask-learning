@@ -1,13 +1,22 @@
-<link href="static/css/login.css" rel="stylesheet" media="screen">
 {% extends "base.html" %}
+
+{% block head %}
+<link href="static/css/login.css" rel="stylesheet" media="screen">
+{% endblock %}
+
 {% block content %}
 
 
   <div class="col-md-4 col-lg-4"></div>
   <div class="wrapper col-md-4 col-lg-4">
     <form class="form-signin">
+      <br>
       <a href="blog">
-         <button class="btn btn-lg btn-warning btn-block" type="button">Макет главной страницы</button>
+         <button class="btn btn-lg btn-warning btn-block btn-wrap" type="button">Макет блога</button>
+      </a>
+      <br>
+      <a href="/">
+         <button class="btn btn-lg btn-warning btn-block btn-wrap" type="button">Макет микроблога</button>
       </a>
       {% if error %}
         <p class="error"><center><strong>Error:</strong> {{ error }}</center></p>
