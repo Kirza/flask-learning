@@ -1,31 +1,42 @@
 <link href="static/css/login.css" rel="stylesheet" media="screen">
 {% extends "base.html" %}
+
 {% block content %}
 
-<form action="" method="post">
-  <div class="col-md-4 col-lg-4"></div>
-  <div class="wrapper col-md-4 col-lg-4">
-    <form class="form-signin">
-      <h2 class="form-signin-heading"><center>Please login</center></h2>
-      <input type="text" class="form-control" name="username" placeholder="Login" required="" autofocus="" value="{{request.form.username }}">
-      <input type="password" class="form-control" name="password" placeholder="Password" required=""  value="{{request.form.password }}">
-      <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      {% if error %}
-        <p class="error"><center><strong>Error:</strong> {{ error }}</center></p>
-      {% endif %}
-      {% for message in get_flashed_messages() %}
-        <center>
-          {{ message }}
-        </center>
-      {% endfor %}
-    </form>
-  </div>
-  <div class="col-md-4 col-lg-4"></div>
-</form>
+<div class="col-md-4 col-lg-4"></div>
+<div class="wrapper col-md-4 col-lg-4">
+  <h2 class="form-signin-heading"><center>Please login</center></h2>
+  <form class="form-signin" role="form" method="post" action="">
+    {{ form.csrf_token }}
+    <p>
+      {{ form.username(placeholder="username") }}
+      <span class="error">
+        {% if form.username.errors %}
+          {% for error in form.username.errors %}
+            {{ error }}
+          {% endfor %}
+        {% endif %}
+      </span>
+    </p>
+    <p>
+    {{ form.password(placeholder="password") }}
+      <span class="error">
+        {% if form.password.errors %}
+          {% for error in form.password.errors %}
+            {{ error }}
+          {% endfor %}
+        {% endif %}
+      </span>
+    </p>
+    <button class="btn btn-sm btn-success" type="submit">Sign in</button>
+
+    {% if error %}
+      <p class="error"><strong>Error:</strong> {{ error }}</p>
+    {% endif %}
+    {% for message in get_flashed_messages() %}
+      {{ message }}
+    {% endfor %}
+  </form>
+</div>
 
 {% endblock %}
