@@ -62,5 +62,5 @@ def register():
         db.session.add(user)
         db.session.commit()
         login_user(user)
-        return redirect(url_for('home.home'))
+        return redirect(url_for('home.preview'))
     return render_template('register.html', form=form)
