@@ -49,6 +49,28 @@ def home():
     posts = db.session.query(BlogPost).all()
     return render_template('index.html', posts=posts)  # render a template
 
+<<<<<<< HEAD
+=======
+@app.route('/blog')
+@login_required
+def blog():
+    return render_template('blog.html')  # render a template
+
+@app.route('/post')
+def post():
+    return render_template('post.html')  # render a template
+
+@app.route('/blog2')
+@login_required
+def blog2():
+    return render_template('blog2.html')  # render a template
+
+@app.route('/preview')
+@login_required
+def preview():
+    return render_template('preview.html')  # render a template
+
+>>>>>>> c3647af232ac5b6042d145d235160210940edd68
 
 @app.route('/welcome')
 def welcome():
