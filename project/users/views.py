@@ -64,3 +64,8 @@ def register():
         login_user(user)
         return redirect(url_for('home.preview'))
     return render_template('register.html', form=form)
+
+
+@users_blueprint.route('/bower')
+def bower():
+    return render_template('bower.html')
