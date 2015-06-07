@@ -6,6 +6,7 @@ from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.bcrypt import Bcrypt
 from flask.ext.login import LoginManager
+from flask.ext.bower import Bower
 import os
 
 ################
@@ -14,6 +15,7 @@ import os
 
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
+Bower(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 app.config.from_object(os.environ['APP_SETTINGS'])

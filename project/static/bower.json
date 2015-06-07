@@ -1,0 +1,23 @@
+{
+  "name": "static",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Kirza/sv-blog",
+  "authors": [
+    "Kirza <kirzaru@gmail.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
