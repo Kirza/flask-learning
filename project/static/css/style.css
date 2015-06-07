@@ -67,7 +67,7 @@ a{
 }
 
 a:hover{
-	color: #FFC107;
+	color: #673AB7;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
 	   -moz-transition: all 1s ease;
@@ -196,8 +196,8 @@ a:hover{
 }
 
 .btn.btn-warning{
-	background-color: #FFC107;
-	border: 1px solid #FFC107;
+	background-color: #673AB7;
+	border: 1px solid #673AB7;
 	color: #fff;
 	border-radius: 0;
 	-webkit-border-radius: 0;
@@ -207,8 +207,8 @@ a:hover{
 }
 
 .btn.btn-warning:hover{
-	background-color: #f39c12;
-	border: 1px solid #f39c12;
+	background-color: #673AB7;
+	border: 1px solid #673AB7;
 	color: #fff;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
