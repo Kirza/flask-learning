@@ -1,0 +1,18 @@
+================================File structure==================================
+1. Break CSS into smart CSS components.
+2. Organize IMG folder.
+3. Create HTML inheritance.
+==================================Design========================================
+1. Add login button to navbar.
+2. Add username and logout button to navbar.
+3. Post editor page.
+4. Comment editor on post page.
+5. Make pages a little wider but font bigger?
+6. Add Social buttons in navbar. Steal from Ruposters.
+=================================Database=======================================
+1. Database for posts.
+2. Roles for users.
+=================================Pages==========================================
+1. Make /blog to be /. With @login_required.
+2. Make previous / to be /micro. With @login_required.
+3. Make normal registration page.
