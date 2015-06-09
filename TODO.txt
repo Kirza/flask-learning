@@ -16,3 +16,7 @@
 1. Make /blog to be /. With @login_required.
 2. Make previous / to be /micro. With @login_required.
 3. Make normal registration page.
+<<<<<<< HEAD
+=======
+s
+>>>>>>> cb65a218bc0be6022c31b5c7661ba59172f0de64
