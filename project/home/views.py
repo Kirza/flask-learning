@@ -45,11 +45,6 @@ def home():
             'index.html', posts=posts, form=form, error=error)
 
 
-@home_blueprint.route('/welcome')
-def welcome():
-    return render_template('welcome.html')  # render a template
-
-
 @home_blueprint.route('/preview')
 @login_required
 def preview():
