@@ -2,6 +2,8 @@
 1. Break CSS into smart CSS components.
 2. Organize IMG folder.
 3. Create HTML inheritance.
+4. Migrate CSS to SCSS or Stylus
+5. Migrate HTML to Jade
 ==================================Design========================================
 1. Add login button to navbar.
 2. Add username and logout button to navbar.
@@ -9,6 +11,7 @@
 4. Comment editor on post page.
 5. Make pages a little wider but font bigger?
 6. Add Social buttons in navbar. Steal from Ruposters.
+7. Add Day in history block in /
 =================================Database=======================================
 1. Database for posts.
 2. Roles for users.
@@ -16,7 +19,3 @@
 1. Make /blog to be /. With @login_required.
 2. Make previous / to be /micro. With @login_required.
 3. Make normal registration page.
-<<<<<<< HEAD
-=======
-s
->>>>>>> cb65a218bc0be6022c31b5c7661ba59172f0de64
