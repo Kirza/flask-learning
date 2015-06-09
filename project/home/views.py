@@ -60,3 +60,9 @@ def preview():
 @login_required
 def blog():
     return render_template('blog.html')  # render a template
+
+
+@home_blueprint.route('/post')
+@login_required
+def post():
+    return render_template('post.html')  # render a template
