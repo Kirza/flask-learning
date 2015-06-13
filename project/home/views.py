@@ -61,3 +61,10 @@ def blog():
 @login_required
 def post():
     return render_template('post.html')  # render a template
+
+@home_blueprint.route('/<int:post_id>')
+@login_required
+def post_generate(post_id):
+    post = db.session.query(BlogPost).filter(BlogPost.id == post_id).first()
+    return 'Post id is %s. Post content is' % post.content
+#    return render_template('post.html', post=post)  # render a template
