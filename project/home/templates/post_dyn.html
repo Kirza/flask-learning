@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="static/css/post.css" rel="stylesheet" media="screen">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="static/content/favicon-bullhorn.ico" />
+    <script src="static/bower_components/pace/pace.js"></script>
+    <link href="static/bower_components/pace/themes/purple/pace-theme-flash.css" rel="stylesheet" />
+	<title>Rupor</title>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<!-- start:header -->
+
+
+	<!-- end:header -->
+
+	<!-- start:navbar -->
+	<nav class="navbar navbar-default navbar-static-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="blog"><strong><i class="fa fa-bullhorn "></i> RUPOR</strong></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="blog">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+				      	<input type="text" class="form-control" placeholder="Введите email">
+				      	<span class="input-group-btn">
+				        	<button class="btn btn-warning" type="button">Подписаться</button>
+				      	</span>
+				    </div>
+				</form>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+	<!-- end:navbar -->
+
+  <!-- start:single blog -->
+  <div id="single-blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 left-panel"></div>
+        <div class="col-lg-8 col-md-8 center-panel material-card">
+          <!-- start:single content -->
+          <div id="main-single-content">
+						<h2><center class="post-text-header text-left">Гражданский порыв.</center></h2>
+						<h3><center class="post-text-header text-left">Первый шаг на пути формирования реального ответа на глобальный неофашистский вызов — налицо.</center></h3>
+            <center><img src="static/content/grazd-wide.jpg" class="img-responsive post-img-header"></center>
+            <div class="content-single">
+              <div class="tag">
+                <p>
+                  <span><i class="fa fa-user"></i> <a href="#">Автор: Сергей Кургинян</a></span>
+                  <i class="fa fa-circle"></i>
+                  <span><i class="fa fa-calendar"></i> <a href="#"> 14 мая 2015 г.</a></span>
+                  <i class="fa fa-circle"></i>
+                  <span><i class="fa fa-tag"></i> <a href="#">Гражданское общество</a>, <a href="#">Россия</a></span>
+                </p>
+              </div>
+              <div class="hr-single"></div>
+		            <h3>Posts:</h3>
+                  <strong>Title:</strong> {{ post.id }} <br>
+                  <strong>Post:</strong> {{ post.title_header }} <br>
+                  <strong>Author:</strong> {{ post.content}} <br>
+                <br>
+              <div class="hr-single"></div>
+              <!-- start:comments -->
+              <div id="comments-list">
+                <!-- start:comments list -->
+                <div class="comment">
+                  <h3>Comments List</h3>
+                  <ul class="comments">
+                                    <li>
+                                        <img src="static/content/strelkov-ava.jpg">
+                                        <div class="post-comments">
+                                            <p class="meta">Juni 30, 2014 <a href="#">Admin</a> says : <i class="pull-right"><a href="#"><small class="btn btn-xs btn-default">Reply</small></a></i></p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="static/content/strelkov-ava.jpg">
+                                        <div class="post-comments">
+                                            <p class="meta">July 1, 2014 <a href="#">Admin</a> says : <i class="pull-right"><a href="#"><small class="btn btn-xs btn-default">Reply</small></a></i></p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+                                            </p>
+                                        </div>
+                                        <ul class="comments hidden-xs list-unstyled">
+                                            <li class="clearfix">
+                                                <img src="static/content/strelkov-ava.jpg" class="avatar" alt="danish personal blog and magazine template">
+                                                <div class="post-comments">
+                                                    <p class="meta">July 2, 2014 <a href="#">Admin</a> says : <i class="pull-right"><a href="#"><small class="btn btn-xs btn-default">Reply</small></a></i></p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        Etiam a sapien odio, sit amet
+                                                    </p>
+                                                </div>
+                                                <ul class="comments list-unstyled">
+                                                    <li class="clearfix">
+                                                        <img src="static/content/strelkov-ava.jpg" class="avatar" alt="danish personal blog and magazine template">
+                                                        <div class="post-comments">
+                                                            <p class="meta">July 3, 2014 <a href="#">Admin</a> says : <i class="pull-right"><a href="#"><small class="btn btn-xs btn-default">Reply</small></a></i></p>
+                                                            <p>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Etiam a sapien odio, sit amet
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="clearfix">
+                                        <img src="static/content/strelkov-ava.jpg" class="avatar" alt="danish personal blog and magazine template">
+                                        <div class="post-comments">
+                                            <p class="meta">July 5, 2014 <a href="#">Admin</a> says : <i class="pull-right"><a href="#"><small class="btn btn-xs btn-default">Reply</small></a></i></p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                </div>
+                <!-- end:comments list -->
+                <!-- start:form comment -->
+                <div class="form-comment">
+                  <h3>Form Comments</h3>
+                  <form role="form">
+                    <div class="row">
+                      <div class="form-group col-md-4">
+                        <input class="form-control input-lg" placeholder="Name..">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <input class="form-control input-lg" placeholder="Email..">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <input class="form-control input-lg" placeholder="Url..">
+                      </div>
+                      <div class="form-group col-md-12">
+                        <textarea class="form-control" rows="10" placeholder="Messages.."></textarea>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <button class="btn btn-lg btn-default btn-block">SUBMIT</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- end:form comment -->
+              </div>
+              <!-- end:comments -->
+            </div>
+          </div>
+          <!-- end:single content -->
+        </div>
+        <div class="col-lg-2 col-md-2 right-panel"></div>
+      </div>
+    </div>
+  </div>

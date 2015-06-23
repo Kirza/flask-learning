@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link href="static/css/create.css" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block content %}
+
+<h1>Rupor</h1>
+
+<!-- post form -->
+<h3>Create blog post</h3>
+<br>
+<form class="form-message" role="form" method="post" action="/create">
+  {{ form.csrf_token }}
+  <p>
+  {{ form.title_header(class_="title_header", placeholder="title_header") }}
+    <span class="error">
+      {% if form.title_header.errors %}
+        {% for error in form.title_header.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+  <p>
+  {{ form.title_long(class_="title_long", placeholder="title_long") }}
+    <span class="error">
+      {% if form.title_long.errors %}
+        {% for error in form.title_long.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+  <p>
+  {{ form.content(rows="30", cols="50") }}
+    <span class="error">
+      {% if form.content.errors %}
+        {% for error in form.content.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+  <p>
+  {{ form.tag(placeholder="tag") }}
+    <span class="error">
+      {% if form.tag.errors %}
+        {% for error in form.tag.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+  <button class="btn btn-sm btn-success" type="submit">Post</button>
+</form>
+
+<!-- All posts -->
+<h3>Posts:</h3>
+{% for post in posts %}
+  <strong>title_header:</strong> {{ post.title_header }} <br>
+  <strong>title_long:</strong> {{ post.title_long }} <br>
+  <strong>content:</strong> {{ post.content }} <br>
+  <strong>tag:</strong> {{ post.tag }} <br>
+  <strong>author:</strong> {{ post.author.name }} <br>
+<br>
+{% endfor %}
+
+{% endblock %}
