@@ -21,4 +21,4 @@
 2. Make previous / to be /micro. With @login_required.
 3. Make normal registration page.
 4. Admin page - Flask-Admin
-5.
+5. Render strings in content

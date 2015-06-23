@@ -24,26 +24,6 @@ home_blueprint = Blueprint(
 ################
 
 # use decorators to link the function to a url
-@home_blueprint.route('/', methods=['GET', 'POST'])
-@login_required
-def home():
-    error = None
-    form = MessageForm(request.form)
-    if form.validate_on_submit():
-        new_message = BlogPost(
-            form.title.data,
-            form.description.data,
-            form.tag.data,
-            current_user.id
-        )
-        db.session.add(new_message)
-        db.session.commit()
-        flash('New entry was successfully posted. Thanks.')
-        return redirect(url_for('home.home'))
-    else:
-        posts = db.session.query(BlogPost).all()
-        return render_template(
-            'index.html', posts=posts, form=form, error=error)
 
 
 @home_blueprint.route('/preview')
@@ -52,7 +32,7 @@ def preview():
     return render_template('preview.html')  # render a template
 
 
-@home_blueprint.route('/blog')
+@home_blueprint.route('/', methods=['GET', 'POST'])
 @login_required
 def blog():
     return render_template('blog.html')  # render a template

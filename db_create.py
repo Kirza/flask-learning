@@ -6,7 +6,7 @@ db.create_all()
 
 # insert data
 db.session.add(User("webpage", "webpage@gmail.com", "letmein"))
-db.session.add(User("superadmin", "no_email@ya.ru", "watchful"))
+db.session.add(User("superadmin", "no_email@ya.ru", "meininlet"))
 db.session.add(User("testpage", "example@example.ru", "letmein"))
 
 # insert data
