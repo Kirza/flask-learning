@@ -80,9 +80,9 @@
               </div>
               <div class="hr-single"></div>
 		            <h3>Posts:</h3>
-                  <strong>Title:</strong> {{ post.id }} <br>
-                  <strong>Post:</strong> {{ post.title_header }} <br>
-                  <strong>Author:</strong> {{ post.content}} <br>
+                  <strong>Title:</strong> <p>{{ post.id }}</p> <br>
+                  <strong>Post:</strong> <p>{{ post.title_header }}</p> <br>
+                  <strong>Content:</strong> <p> {{ content|safe }} </p> <br>
                 <br>
               <div class="hr-single"></div>
               <!-- start:comments -->

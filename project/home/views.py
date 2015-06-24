@@ -48,7 +48,12 @@ def post():
 def post_generate(post_id):
     post = db.session.query(BlogPost).filter(BlogPost.id == post_id).first()
 #    return 'Post id is %s. Post content is' % post.content
-    return render_template('post_dyn.html', post=post)  # render a template
+    content = post.content
+    print("PRE ", content)
+    content = content.replace("\r", " </p> ", 40)
+    content = content.replace("\n", " <p> ", 40)
+    print("POST ", content)
+    return render_template('post_dyn.html', post=post, content=content)  # render a template
 
 @home_blueprint.route('/create', methods=['GET', 'POST'])
 @login_required
