@@ -1,6 +1,6 @@
 ================================File structure==================================
 1. Break CSS into smart CSS components.
-2. Break HTML into parts
+2. Break HTML into parts 
 3. Organize IMG folder.
 4. Create HTML inheritance.
 5. Migrate CSS to SCSS or Stylus
