@@ -47,7 +47,6 @@ def post():
 @login_required
 def post_generate(post_id):
     post = db.session.query(BlogPost).filter(BlogPost.id == post_id).first()
-#    return 'Post id is %s. Post content is' % post.content
     content = post.content
     print("PRE ", content)
     content = content.replace("\r", " </p> ", 40)

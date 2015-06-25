@@ -3,29 +3,89 @@
   <head>
     <title>Rupor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="static/css/style.css" rel="stylesheet" media="screen">
     <link rel="shortcut icon" href="static/content/favicon-bullhorn.ico" />
     <script src="static/bower_components/pace/pace.js"></script>
     <link href="static/bower_components/pace/themes/purple/pace-theme-flash.css" rel="stylesheet" />
+    <title>Rupor</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
     {% block head %}{% endblock %}
   </head>
   <body>
 
-    <div class="container">
+    {% block navbar %}
+    <!-- start:navbar -->
+  	<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  		<div class="container">
+  			<!-- Brand and toggle get grouped for better mobile display -->
+  			<div class="navbar-header">
+  				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+  					<span class="sr-only">Toggle navigation</span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  				</button>
+  				<a class="navbar-brand" href="/"><strong><i class="fa fa-bullhorn "></i> RUPOR</strong></a>
+  			</div>
 
-      <!-- child template -->
+  			<!-- Collect the nav links, forms, and other content for toggling -->
+  			<div class="collapse navbar-collapse navbar-ex1-collapse">
+  				<ul class="nav navbar-nav">
+  					<li class="active"><a href="blog">HOME</a></li>
+  					<li><a href="#">ABOUT</a></li>
+  				</ul>
+  				<form class="navbar-form navbar-right">
+  					<div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+  				      	<input type="text" class="form-control" placeholder="Введите email">
+  				      	<span class="input-group-btn">
+  				        	<button class="btn btn-warning" type="button">Подписаться</button>
+  				      	</span>
+  				  </div>
+  					<div class="input-group">
+  				      	<span class="input-group-btn">
+  									<a href="/logout">
+  				        		<button class="btn" type="button">logout</button>
+  									</a>
+  				      	</span>
+  				  </div>
+  				</form>
+  			</div>
+  		</div>
+  	</nav>
+  	<!-- end:navbar -->
+    {% endblock %}
+
+
       {% block content %}{% endblock %}
 
-      <!-- errors
-      {% if error %}
-        <p class="error"><strong>Error:</strong> {{ error }}</p>
-      {% endif %}-->
 
-
-    </div>
-    <!-- {% for message in get_flashed_messages() %}
-      {{ message }}
-    {% endfor %}  -->
+    {% block footer %}
+      <footer>
+  		    <div class="container">
+      			<div class="row">
+      				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      					<div class="widget-footer">
+      						<div class="sosmed-footer">
+      							<a href="#"><i class="fa fa-vk" data-toggle="tooltip" data-placement="top" title="Vkontakte"></i></a>
+      							<a href="#"><i class="fa fa-twitter" data-toggle="tooltip" data-placement="top" title="Twitter"></i></a>
+      							<a href="#"><i class="fa fa-google-plus" data-toggle="tooltip" data-placement="top" title="Google-Plus"></i></a>
+      							<a href="#"><i class="fa fa-youtube" data-toggle="tooltip" data-placement="top" title="Youtube"></i></a>
+      						</div>
+      					</div>
+      				</div>
+            </div>
+          </div>
+      </footer>
+    {% endblock %}
 
   </body>
 </html>

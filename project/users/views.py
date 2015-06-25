@@ -47,7 +47,7 @@ def login():
 def logout():
     logout_user()
     flash('You were logged out.')
-    return redirect(url_for('home.welcome'))
+    return redirect(url_for('users.login'))
 
 
 @users_blueprint.route('/register', methods=['GET', 'POST'])
@@ -62,7 +62,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         login_user(user)
-        return redirect(url_for('home.preview'))
+        return redirect(url_for('home.blog'))
     return render_template('register.html', form=form)
 
 

@@ -1,77 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
+
+{% block head %}
 	<link href="static/css/post.css" rel="stylesheet" media="screen">
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" href="static/content/favicon-bullhorn.ico" />
-    <script src="static/bower_components/pace/pace.js"></script>
-    <link href="static/bower_components/pace/themes/purple/pace-theme-flash.css" rel="stylesheet" />
-	<title>Rupor</title>
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
+{% endblock %}
 <body>
-
-	<!-- start:header -->
-
-
-	<!-- end:header -->
-
-	<!-- start:navbar -->
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/"><strong><i class="fa fa-bullhorn "></i> RUPOR</strong></a>
-			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="blog">HOME</a></li>
-					<li><a href="#">ABOUT</a></li>
-				</ul>
-				<form class="navbar-form navbar-right">
-					<div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-				      	<input type="text" class="form-control" placeholder="Введите email">
-				      	<span class="input-group-btn">
-				        	<button class="btn btn-warning" type="button">Подписаться</button>
-				      	</span>
-				  </div>
-					<div class="input-group">
-				      	<span class="input-group-btn">
-									<a href="/login">
-				        		<button class="btn" type="button">logout</button>
-									</a>
-				      	</span>
-				  </div>
-				</form>
-			</div><!-- /.navbar-collapse -->
-		</div>
-	</nav>
-	<!-- end:navbar -->
-
-  <!-- start:single blog -->
+	{% block content %}
   <div id="single-blog">
     <div class="container">
       <div class="row">
         <div class="col-lg-2 col-md-2 left-panel"></div>
         <div class="col-lg-8 col-md-8 center-panel material-card">
           <!-- start:single content -->
-          <div id="main-single-content">
 						<h2><center class="post-text-header text-left">Гражданский порыв.</center></h2>
 						<h3><center class="post-text-header text-left">Первый шаг на пути формирования реального ответа на глобальный неофашистский вызов — налицо.</center></h3>
             <center><img src="static/content/grazd-wide.jpg" class="img-responsive post-img-header"></center>
@@ -279,10 +218,10 @@
               </div>
               <!-- end:comments -->
             </div>
-          </div>
-          <!-- end:single content -->
         </div>
         <div class="col-lg-2 col-md-2 right-panel"></div>
       </div>
     </div>
   </div>
+	{% endblock %}
+{% block footer %}{% endblock %}
