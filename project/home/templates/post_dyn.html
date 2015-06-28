@@ -12,24 +12,27 @@
         <div class="col-lg-2 col-md-2 left-panel"></div>
         <div class="col-lg-8 col-md-8 center-panel material-card">
           <!-- start:single content -->
-						<h2><center class="post-text-header text-left">Гражданский порыв.</center></h2>
-						<h3><center class="post-text-header text-left">Первый шаг на пути формирования реального ответа на глобальный неофашистский вызов — налицо.</center></h3>
-            <center><img src="static/content/grazd-wide.jpg" class="img-responsive post-img-header"></center>
+						<h2><center class="post-text-header text-left">{{ post.title_header }}</center></h2>
+						<h3><center class="post-text-header text-left">{{ post.title_long }}</center></h3>
+            <center><img src={{ image }} class="img-responsive post-img-header"></center>
             <div class="content-single">
               <div class="tag">
                 <p>
-                  <span><i class="fa fa-user"></i> <a href="#">Автор: Сергей Кургинян</a></span>
+                  <span><i class="fa fa-user"></i>
+										{{% if author_id_manual is None %}}
+											<a href="#">Автор: {{ post.author_id_auto }}</a>
+										{{% else %}}
+											<a href="#">Автор: {{ post.author_id_manual }}</a>
+										{{% endif %}}
+									</span>
                   <i class="fa fa-circle"></i>
-                  <span><i class="fa fa-calendar"></i> <a href="#"> 14 мая 2015 г.</a></span>
+                  <span><i class="fa fa-calendar"></i> <a href="#">{{ post.creation_date }}</a></span>
                   <i class="fa fa-circle"></i>
-                  <span><i class="fa fa-tag"></i> <a href="#">Гражданское общество</a>, <a href="#">Россия</a></span>
+                  <span><i class="fa fa-tag"></i> <a href="#">{{ post.tag }}</a></span>
                 </p>
               </div>
               <div class="hr-single"></div>
-		            <h3>Posts:</h3>
-                  <strong>Title:</strong> <p>{{ post.id }}</p> <br>
-                  <strong>Post:</strong> <p>{{ post.title_header }}</p> <br>
-                  <strong>Content:</strong> <p> {{ content|safe }} </p> <br>
+                  <p> {{ content|safe }} </p> <br>
                 <br>
               <div class="hr-single"></div>
               <!-- start:comments -->

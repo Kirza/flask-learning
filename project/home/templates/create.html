@@ -5,65 +5,91 @@
 {% endblock %}
 
 {% block content %}
-
-<h1>Rupor</h1>
-
+<div class="container">
 <!-- post form -->
-<h3>Create blog post</h3>
-<br>
-<form class="form-message" role="form" method="post" action="/create">
-  {{ form.csrf_token }}
-  <p>
-  {{ form.title_header(class_="title_header", placeholder="title_header") }}
-    <span class="error">
-      {% if form.title_header.errors %}
-        {% for error in form.title_header.errors %}
-          {{ error }}
-        {% endfor %}
-      {% endif %}
-    </span>
-  </p>
-  <p>
-  {{ form.title_long(class_="title_long", placeholder="title_long") }}
-    <span class="error">
-      {% if form.title_long.errors %}
-        {% for error in form.title_long.errors %}
-          {{ error }}
-        {% endfor %}
-      {% endif %}
-    </span>
-  </p>
-  <p>
-  {{ form.content(rows="30", cols="50") }}
-    <span class="error">
-      {% if form.content.errors %}
-        {% for error in form.content.errors %}
-          {{ error }}
-        {% endfor %}
-      {% endif %}
-    </span>
-  </p>
-  <p>
-  {{ form.tag(placeholder="tag") }}
-    <span class="error">
-      {% if form.tag.errors %}
-        {% for error in form.tag.errors %}
-          {{ error }}
-        {% endfor %}
-      {% endif %}
-    </span>
-  </p>
-  <button class="btn btn-sm btn-success" type="submit">Post</button>
-</form>
-
+  <div class="row">
+    <div class="col-lg-2 col-md-2"></div>
+      <form class="form-message" role="form" method="post" action="/create">
+        <div class="col-lg-4 col-md-4">
+          {{ form.csrf_token }}
+          <p>
+          {{ form.image_link(class_="image_link", placeholder="image_link", cols="40") }}
+            <span class="error">
+              {% if form.title_header.errors %}
+                {% for error in form.title_header.errors %}
+                  {{ error }}
+                {% endfor %}
+              {% endif %}
+            </span>
+          </p>
+          <p>
+          {{ form.title_header(placeholder="title_header", cols="40") }}
+            <span class="error">
+              {% if form.title_header.errors %}
+                {% for error in form.title_header.errors %}
+                  {{ error }}
+                {% endfor %}
+              {% endif %}
+            </span>
+          </p>
+          <p>
+          {{ form.title_long(placeholder="title_long", cols="40") }}
+            <span class="error">
+              {% if form.title_long.errors %}
+                {% for error in form.title_long.errors %}
+                  {{ error }}
+                {% endfor %}
+              {% endif %}
+            </span>
+          </p>
+          <p>
+          {{ form.tag(placeholder="tag", cols="40") }}
+            <span class="error">
+              {% if form.tag.errors %}
+                {% for error in form.tag.errors %}
+                  {{ error }}
+                {% endfor %}
+              {% endif %}
+            </span>
+          </p>
+          <p>
+          {{ form.author_name_manual(class_="author_name_manual", placeholder="Only fill if author name dont match your username", cols="40") }}
+            <span class="error">
+              {% if form.title_header.errors %}
+                {% for error in form.title_header.errors %}
+                  {{ error }}
+                {% endfor %}
+              {% endif %}
+            </span>
+          </p>
+          <button class="btn btn-lg btn-success" type="submit">Post</button>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <p>
+          {{ form.content(rows="30", cols="50", placeholder="content") }}
+            <span class="error">
+              {% if form.content.errors %}
+                {% for error in form.content.errors %}
+                  {{ error }}
+                {% endfor %}
+              {% endif %}
+            </span>
+          </p>
+        </div>
+      </form>
+  </div>
+</div>
 <!-- All posts -->
 <h3>Posts:</h3>
 {% for post in posts %}
   <strong>title_header:</strong> {{ post.title_header }} <br>
   <strong>title_long:</strong> {{ post.title_long }} <br>
-  <strong>content:</strong> {{ post.content }} <br>
+  <strong>content:</strong> {{ post.content[:100] }} <br>
   <strong>tag:</strong> {{ post.tag }} <br>
-  <strong>author:</strong> {{ post.author.name }} <br>
+  <strong>creation_date:</strong> {{ post.creation_date }} <br>
+  <strong>image_link:</strong> {{ post.image_link }} <br>
+  <strong>author_auto:</strong> {{ post.author_name_auto }} <br>
+  <strong>author_manual:</strong> {{ post.author_name_manual }} <br>
 <br>
 {% endfor %}
 

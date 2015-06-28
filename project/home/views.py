@@ -9,6 +9,8 @@ from forms import MessageForm, BlogPostForm
 from project import db
 from project.models import BlogPost
 
+import datetime
+
 ################
 #### config ####
 ################
@@ -48,16 +50,15 @@ def post():
 def post_generate(post_id):
     post = db.session.query(BlogPost).filter(BlogPost.id == post_id).first()
     content = post.content
-    print("PRE ", content)
     content = content.replace("\r", " </p> ", 40)
     content = content.replace("\n", " <p> ", 40)
-    print("POST ", content)
-    return render_template('post_dyn.html', post=post, content=content)  # render a template
+    return render_template('post_dyn.html', post=post, content=content, image=image)
 
 @home_blueprint.route('/create', methods=['GET', 'POST'])
 @login_required
 def create():
     error = None
+    date = datetime.datetime.now()
     form = BlogPostForm(request.form)
     if form.validate_on_submit():
         new_post = BlogPost(
@@ -65,7 +66,10 @@ def create():
             form.title_long.data,
             form.content.data,
             form.tag.data,
-            current_user.id
+            date,
+            form.image_link.data,
+            current_user.id,
+            form.author_name_manual.data
         )
         db.session.add(new_post)
         db.session.commit()

@@ -9,24 +9,25 @@ class BlogPost(db.Model):
 
     __tablename__ = "posts"
 
-    # id = db.Column(db.Integer, primary_key=True)
-    # title = db.Column(db.String, nullable=False)
-    # description = db.Column(db.String, nullable=False)
-    # author_id = db.Column(db.Integer, ForeignKey('users.id'))
-
     id = db.Column(db.Integer, primary_key=True)
     title_header = db.Column(db.String)
     title_long = db.Column(db.String)
     content = db.Column(db.String)
     tag = db.Column(db.String)
-    author_id = db.Column(db.Integer, ForeignKey('users.id'))
+    creation_date = db.Column(db.String)
+    image_link = db.Column(db.String)
+    author_name_auto = db.Column(db.Integer, ForeignKey('users.id'))
+    author_name_manual = db.Column(db.String)
 
-    def __init__(self, title_header, title_long, content, tag, author_id):
+    def __init__(self, title_header, title_long, content, tag, creation_date, image_link,  author_name_auto, author_name_manual):
         self.title_header = title_header
         self.title_long = title_long
         self.content = content
         self.tag = tag
-        self.author_id = author_id
+        self.creation_date = creation_date
+        self.image_link = image_link
+        self.author_name_auto = author_name_auto
+        self.author_name_manual = author_name_manual
 
     def __repr__(self):
         return '<title {}'.format(self.title_header)
