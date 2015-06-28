@@ -14,19 +14,19 @@
           <!-- start:single content -->
 						<h2><center class="post-text-header text-left">{{ post.title_header }}</center></h2>
 						<h3><center class="post-text-header text-left">{{ post.title_long }}</center></h3>
-            <center><img src={{ image }} class="img-responsive post-img-header"></center>
+            <center><img src={{ post.image_link }} class="img-responsive post-img-header"></center>
             <div class="content-single">
               <div class="tag">
                 <p>
                   <span><i class="fa fa-user"></i>
-										{{% if author_id_manual is None %}}
-											<a href="#">Автор: {{ post.author_id_auto }}</a>
-										{{% else %}}
-											<a href="#">Автор: {{ post.author_id_manual }}</a>
-										{{% endif %}}
+										{% if author_id_manual != None %}
+											<a href="#">Автор: {{ post.author_name_manual }}</a>
+										{% else %}
+											<a href="#">Автор: {{ post.author.name }}</a>
+										{% endif %}
 									</span>
                   <i class="fa fa-circle"></i>
-                  <span><i class="fa fa-calendar"></i> <a href="#">{{ post.creation_date }}</a></span>
+                  <span><i class="fa fa-calendar"></i> <a href="#">{{ post.creation_date[:16] }}</a></span>
                   <i class="fa fa-circle"></i>
                   <span><i class="fa fa-tag"></i> <a href="#">{{ post.tag }}</a></span>
                 </p>
