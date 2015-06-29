@@ -3,9 +3,6 @@
 
 @import url('bootstrap.min.css');
 @import url('font-awesome.min.css');
-@import url('owl.carousel.css');
-@import url('owl.theme.css');
-@import url('owl.transitions.css');
 @import url('');
 
 
@@ -67,7 +64,7 @@ a{
 }
 
 a:hover{
-	color: #FFC107;
+	color: #c62828;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
 	   -moz-transition: all 1s ease;
@@ -196,8 +193,8 @@ a:hover{
 }
 
 .btn.btn-warning{
-	background-color: #FFC107;
-	border: 1px solid #FFC107;
+	background-color: #C11D1D;
+	border: 1px solid #C11D1D;
 	color: #fff;
 	border-radius: 0;
 	-webkit-border-radius: 0;
@@ -207,8 +204,8 @@ a:hover{
 }
 
 .btn.btn-warning:hover{
-	background-color: #f39c12;
-	border: 1px solid #f39c12;
+	background-color: #c62828;
+	border: 1px solid #c62828;
 	color: #fff;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
@@ -262,9 +259,9 @@ a:hover{
 }
 
 .pagination li a:hover{
-	background-color: #FFC107;
+	background-color: #c62828;
 	color: #fff;
-	border: 1px solid #f39c12;
+	border: 1px solid #c62828;
 }
 
 .input-group-addon{
@@ -300,7 +297,7 @@ a:hover{
 
 .label-default[href]:hover,
 .label-default[href]:focus{
-	background-color: #FFC107;
+	background-color: #c62828;
 }
 
 .label-primary{
@@ -331,12 +328,12 @@ a:hover{
 }
 
 .label-warning{
-	background-color: #FFC107;
+	background-color: #c62828;
 }
 
 .label-warning[href]:hover,
 .label-warning[href]:focus{
-	background-color: #f39c12;
+	background-color: #c62828;
 }
 
 .label-danger{
@@ -446,7 +443,7 @@ a:hover{
 }
 
 .navbar.navbar-default{
-	background-color: #1a237e;
+	background-color: #212121;
 	border-bottom: 3px solid #e5ebef;
 	margin-bottom: 5px;
 	padding: 8px 0;
@@ -459,15 +456,15 @@ a:hover{
 .navbar-default .navbar-nav>.active>a,
 .navbar.navbar-default .navbar-nav>.active>a:hover,
 .navbar.navbar-default .navbar-nav>.active>a:focus{
-	background-color: #1a237e;
-	color: #FFC107;
+	background-color: #212121;
+	color: #B2DFDB;
 }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus{
 	color: #fff;
-	background-color: #FFC107;
+	background-color: #c62828;
 }
 
 .navbar-default .navbar-collapse,
@@ -476,7 +473,7 @@ a:hover{
 }
 
 .dropdown-menu{
-	background-color: #FFC107;
+	background-color: #c62828;
 	border: none;
 	box-shadow: none;
 	-webkit-box-shadow: none;
@@ -496,7 +493,7 @@ a:hover{
 }
 
 .navbar-default ul.nav li a:hover{
-	color: #FFC107;
+	color: #616161;
 }
 
 /* CONTENT
@@ -554,7 +551,7 @@ a:hover{
 }
 
 #content aside .content-title a:hover{
-	color: #FFC107;
+	color: #616161;
 }
 
 #content aside .content-footer{
@@ -1220,7 +1217,7 @@ ul.comments p.meta{
 }
 
 .box-register .form-control:focus{
-	border: 2px solid #FFC107;
+	border: 2px solid #c62828;
 }
 
 /*	BLANK PAGE
@@ -1240,7 +1237,7 @@ ul.comments p.meta{
 ===============================*/
 
 footer{
-	background-color: #455A64;
+	background-color: #212121;
 	padding: 30px 0;
 	border-top: 7px solid #bdc3c7;
 	color: #ecf0f1;
@@ -1261,7 +1258,7 @@ footer h4:after{
 	display: block;
 	content: '';
 	padding-bottom: 10px;
-	border-bottom: 2px solid #FFC107;
+	border-bottom: 2px solid #c62828;
 	width: 100px;
 }
 
@@ -1278,7 +1275,7 @@ footer .sosmed-footer i.fa{
 }
 
 footer .sosmed-footer i.fa:hover{
-	background-color: #FFC107;
+	background-color: #c62828;
 	color: #fff;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;

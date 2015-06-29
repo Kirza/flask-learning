@@ -37,13 +37,9 @@ def preview():
 @home_blueprint.route('/', methods=['GET', 'POST'])
 @login_required
 def blog():
-    return render_template('blog.html')  # render a template
+    posts = db.session.query(BlogPost).all()
+    return render_template('blog.html', posts=posts)  # render a template
 
-
-@home_blueprint.route('/post')
-@login_required
-def post():
-    return render_template('post.html')  # render a template
 
 @home_blueprint.route('/<int:post_id>')
 @login_required
