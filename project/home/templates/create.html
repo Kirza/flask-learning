@@ -13,16 +13,6 @@
         <div class="col-lg-4 col-md-4">
           {{ form.csrf_token }}
           <p>
-          {{ form.image_link(class_="image_link", placeholder="image_link", cols="40") }}
-            <span class="error">
-              {% if form.title_header.errors %}
-                {% for error in form.title_header.errors %}
-                  {{ error }}
-                {% endfor %}
-              {% endif %}
-            </span>
-          </p>
-          <p>
           {{ form.title_header(placeholder="title_header", cols="40") }}
             <span class="error">
               {% if form.title_header.errors %}
@@ -54,6 +44,26 @@
           </p>
           <p>
           {{ form.author_name_manual(class_="author_name_manual", placeholder="Only fill if author name dont match your username", cols="40") }}
+            <span class="error">
+              {% if form.title_header.errors %}
+                {% for error in form.title_header.errors %}
+                  {{ error }}
+                {% endfor %}
+              {% endif %}
+            </span>
+          </p>
+          <p>
+          {{ upload.image(placeholder="Upload image", cols="40") }}
+            <span class="error">
+              {% if form.title_header.errors %}
+                {% for error in form.title_header.errors %}
+                  {{ error }}
+                {% endfor %}
+              {% endif %}
+            </span>
+          </p>
+          <p>
+          {{ upload.description(placeholder="Image description", cols="40") }}
             <span class="error">
               {% if form.title_header.errors %}
                 {% for error in form.title_header.errors %}

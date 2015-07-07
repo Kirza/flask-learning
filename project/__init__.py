@@ -22,6 +22,7 @@ login_manager.init_app(app)
 app.config.from_object(os.environ['APP_SETTINGS'])
 db = SQLAlchemy(app)
 
+
 from project.users.views import users_blueprint
 from project.home.views import home_blueprint
 

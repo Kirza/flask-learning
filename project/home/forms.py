@@ -1,5 +1,5 @@
 from flask_wtf import Form
-from wtforms import TextField, TextAreaField
+from wtforms import TextField, TextAreaField, FileField
 from wtforms.validators import DataRequired, Length
 
 
@@ -13,5 +13,7 @@ class BlogPostForm(Form):
     title_long = TextAreaField('Title long', validators=[Length(max=250)])
     content = TextAreaField('Main content', validators=[DataRequired(), Length(max=25000)])
     tag = TextAreaField('Tags', validators=[Length(max=25)])
-    image_link = TextAreaField('Image', validators=[DataRequired(), Length(max=100)])
     author_name_manual = TextAreaField('Only fill if author name dont match your username', validators=[Length(max=25)])
+
+class PhotoForm(Form):
+    photo = FileField('Image File')

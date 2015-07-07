@@ -4,12 +4,14 @@
 
 from flask import render_template, Blueprint, request, flash, redirect, url_for
 from flask.ext.login import login_required, current_user
-
-from forms import MessageForm, BlogPostForm
+from werkzeug import secure_filename
+from forms import MessageForm, BlogPostForm, PhotoForm
 from project import db
 from project.models import BlogPost
 
 import datetime
+import os
+
 
 ################
 #### config ####
@@ -56,14 +58,17 @@ def create():
     error = None
     date = datetime.datetime.now()
     form = BlogPostForm(request.form)
-    if form.validate_on_submit():
+    upload = UploadForm(request.form)
+    if form.validate_on_submit() and upload.validate_on_submit():
+        filename = secure_filename(upload.image.data.filename)
+        upload.image.data.save('static/images/source' + filename)
         new_post = BlogPost(
             form.title_header.data,
             form.title_long.data,
             form.content.data,
             form.tag.data,
             date,
-            form.image_link.data,
+            'static/images/source' + filename,
             current_user.id,
             form.author_name_manual.data
         )
@@ -74,4 +79,29 @@ def create():
     else:
         posts = db.session.query(BlogPost).all()
         return render_template(
-            'create.html', posts=posts, form=form, error=error)
+            'create.html', posts=posts, form=form, error=error, upload=upload)
+
+@home_blueprint.route('/upload', methods=['GET', 'POST'])
+@login_required
+def upload():
+    current_folder = os.getcwd()
+    UPLOAD_FOLDER = os.path.join(current_folder, 'static/images/')
+    print UPLOAD_FOLDER[1:]
+    form = PhotoForm()
+    if form.validate_on_submit():
+        filename = secure_filename(form.photo.data.filename)
+        form.photo.data.save('project/static/images/' + filename)
+    else:
+        filename = None
+    return render_template('upload.html', form=form, filename=filename)
+    # form = PhotoForm(request.form)
+    # if form.validate_on_submit():
+    #     filename = secure_filename(form.image.name)
+    #     form.image.save('static/images/source' + '1')
+    #     flash('New image was successfully posted. Thanks.')
+    #     print 'images saved to', 'static/images/source' + filename
+    #     return redirect(url_for('home.upload'))
+    # else:
+    #     filename = None
+    #     return render_template(
+    #         'upload.html', form=form, filename=filename)
