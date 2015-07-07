@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <link href="static/css/create.css" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<!-- post form -->
+  <div class="row">
+    <div class="col-lg-2 col-md-2"></div>
+      <form class="form-message" role="form" method="post" action="/upload" enctype="multipart/form-data">
+        <div class="col-lg-4 col-md-4">
+          {{ form.csrf_token }}
+          <p>{{ filename }}</p>
+          <p>
+          {{ form.photo(placeholder="Upload image", cols="40") }}
+          </p>
+          <button class="btn btn-lg btn-success" type="submit">Post</button>
+        </div>
+      </form>
+  </div>
+</div>
+<!-- end -->
+{% endblock %}
+
+{% block footer %}{% endblock %}
