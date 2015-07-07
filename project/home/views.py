@@ -10,7 +10,6 @@ from project import db
 from project.models import BlogPost
 
 import datetime
-import os
 
 
 ################
@@ -84,9 +83,6 @@ def create():
 @home_blueprint.route('/upload', methods=['GET', 'POST'])
 @login_required
 def upload():
-    current_folder = os.getcwd()
-    UPLOAD_FOLDER = os.path.join(current_folder, 'static/images/')
-    print UPLOAD_FOLDER[1:]
     form = PhotoForm()
     if form.validate_on_submit():
         filename = secure_filename(form.photo.data.filename)
