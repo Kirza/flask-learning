@@ -9,7 +9,7 @@
 <!-- post form -->
   <div class="row">
     <div class="col-lg-2 col-md-2"></div>
-      <form class="form-message" role="form" method="post" action="/create">
+      <form class="form-message" role="form" method="post" action="/create" enctype="multipart/form-data">
         <div class="col-lg-4 col-md-4">
           {{ form.csrf_token }}
           <p>
@@ -52,25 +52,9 @@
               {% endif %}
             </span>
           </p>
+          <p>{{ filename }}</p>
           <p>
-          {{ upload.image(placeholder="Upload image", cols="40") }}
-            <span class="error">
-              {% if form.title_header.errors %}
-                {% for error in form.title_header.errors %}
-                  {{ error }}
-                {% endfor %}
-              {% endif %}
-            </span>
-          </p>
-          <p>
-          {{ upload.description(placeholder="Image description", cols="40") }}
-            <span class="error">
-              {% if form.title_header.errors %}
-                {% for error in form.title_header.errors %}
-                  {{ error }}
-                {% endfor %}
-              {% endif %}
-            </span>
+          {{ form.image(placeholder="Upload image", cols="40") }}
           </p>
           <button class="btn btn-lg btn-success" type="submit">Post</button>
         </div>

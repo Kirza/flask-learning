@@ -20,11 +20,11 @@
 												</center>
 												<div class="content-title">
 													<div class="text-left">
-														<h3><a href="post">{{ post.title_header }}</a></h3>
+														<h3><a href={{ post.id }}>{{ post.title_header }}</a></h3>
 													</div>
 												</div>
 												<div class="content-footer">
-													<span>{{ post.creation_date[:10] }}</span>
+													<span>{{ post.creation_date[:10] + ' ' + post.author_name_manual }}</span>
 													<span class="pull-right">
 														<a href="#"><i class="fa fa-comments" data-toggle="tooltip" data-placement="top" title="Comments"></i> 30</a>
 														<a href="#"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Loved"></i> 20</a>

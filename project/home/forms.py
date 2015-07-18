@@ -14,6 +14,7 @@ class BlogPostForm(Form):
     content = TextAreaField('Main content', validators=[DataRequired(), Length(max=25000)])
     tag = TextAreaField('Tags', validators=[Length(max=25)])
     author_name_manual = TextAreaField('Only fill if author name dont match your username', validators=[Length(max=25)])
+    image = FileField('Image File')
 
-class PhotoForm(Form):
-    photo = FileField('Image File')
+class ImageForm(Form):
+    image = FileField('Image File')

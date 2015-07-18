@@ -195,8 +195,8 @@ a:hover{
 }
 
 .btn.btn-warning{
-	background-color: #FFC107;
-	border: 1px solid #FFC107;
+	background-color: #C11D1D;
+	border: 1px solid #C11D1D;
 	color: #fff;
 	border-radius: 0;
 	-webkit-border-radius: 0;
@@ -206,8 +206,8 @@ a:hover{
 }
 
 .btn.btn-warning:hover{
-	background-color: #f39c12;
-	border: 1px solid #f39c12;
+	background-color: #c62828;
+	border: 1px solid #c62828;
 	color: #fff;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
@@ -445,7 +445,7 @@ a:hover{
 }
 
 .navbar.navbar-default{
-	background-color: #1a237e;
+	background-color: #212121;
 	border-bottom: 3px solid #eeeded;
 	margin-bottom: 5px;
 	padding: 8px 0;
@@ -458,15 +458,15 @@ a:hover{
 .navbar-default .navbar-nav>.active>a,
 .navbar.navbar-default .navbar-nav>.active>a:hover,
 .navbar.navbar-default .navbar-nav>.active>a:focus{
-	background-color: #1a237e;
-	color: #FFC107;
+	background-color: #212121;
+	color: #B2DFDB;
 }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus{
 	color: #fff;
-	background-color: #FFC107;
+	background-color: #c62828;
 }
 
 .navbar-default .navbar-collapse,
