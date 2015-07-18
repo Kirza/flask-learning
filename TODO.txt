@@ -1,19 +1,44 @@
-================================File structure==================================
+===General
+======FrontEnd
+1. Add Social buttons in navbar. Take from Ruposters.
+======BackEnd
 1. Break CSS into smart CSS components.
 2. Migrate CSS to SCSS or Stylus
-==================================Design========================================
-1. Add login button to navbar.
-2. Add username and logout button to navbar.
-3. Post editor page.
-4. Comment editor on post page.
-5. Make pages a little wider but font bigger?
-6. Add Social buttons in navbar. Take from Ruposters.
-7. Add Day in history block in /
-=================================Database=======================================
-1. Database for comments
-2. Roles for users.
-=================================Pages==========================================
-1. Make normal registration page.
+3. Roles for users
 
-1. Image processing on upload: wide, thumbnail.
-2. Storing img links in post database
+
+===Main
+======FrontEnd
+1. Make sweet design - big and small pictures, smth else
+======BackEnd
+
+
+===Post
+======FrontEnd
+1. Sweet comments
+2. Sweet comments input
+======BackEnd
+1. Comments database model
+2. Good text, image render in post body
+3. Comments input
+
+
+===PostEditor
+======FrontEnd
+1. Make sweet style
+2. Add text input WYSIWYG
+======BackEnd
+1.Image processing on upload: wide, thumbnail.
+2. Text, Tag in main body reparsing
+
+
+===RegistartionPage
+======FrontEnd
+1. Sweet design
+======BackEnd
+
+
+===Hints, Ideas
+======FrontEnd
+1. Day in history on main page
+======BackEnd
