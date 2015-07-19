@@ -49,7 +49,7 @@ def post_generate(post_id):
     content = post.content
     content = content.replace("\r", " </p> ", 40)
     content = content.replace("\n", " <p> ", 40)
-    return render_template('post_dyn.html', post=post, content=content)
+    return render_template('post.html', post=post, content=content)
 
 @home_blueprint.route('/create', methods=['GET', 'POST'])
 @login_required
