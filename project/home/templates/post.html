@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link href="static/css/post.css" rel="stylesheet" media="screen">
+	<link href="static/css/comments.css" rel="stylesheet" media="screen">
+{% endblock %}
+<body>
+	{% block content %}
+  <!-- start:single blog -->
+  <div id="single-blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 left-panel"></div>
+        <div class="col-lg-8 col-md-8 center-panel material-card">
+          <!-- start:single content -->
+						<h2><center class="post-text-header text-left">{{ post.title_header }}</center></h2>
+						<h3><center class="post-text-header text-left">{{ post.title_long }}</center></h3>
+            <center><img src={{ post.image_link }} class="img-responsive post-img-header"></center>
+            <div class="content-single">
+              <div class="tag">
+                <p>
+                  <span><i class="fa fa-user"></i>
+										{% if author_id_manual != None %}
+											<a href="#">Автор: {{ post.author_name_manual }}</a>
+										{% else %}
+											<a href="#">Автор: {{ post.author.name }}</a>
+										{% endif %}
+									</span>
+                  <i class="fa fa-circle"></i>
+                  <span><i class="fa fa-calendar"></i> <a href="#">{{ post.creation_date[:16] }}</a></span>
+                  <i class="fa fa-circle"></i>
+                  <span><i class="fa fa-tag"></i> <a href="#">{{ post.tag }}</a></span>
+                </p>
+              </div>
+              <div class="hr-single"></div>
+                  <p> {{ content|safe }} </p> <br>
+                <br>
+              <div class="hr-single"></div>
+              <!-- start:comments -->
+              <div id="comments-list">
+                <!-- start:comments list -->
+                <div class="comment">
+                  <h3>Comments List</h3>
+                  <ul class="comments">
+                                    <li>
+                                        <img src="static/content/strelkov-ava.jpg">
+                                        <div class="post-comments">
+                                            <p class="meta">Juni 30, 2014 <a href="#">Admin</a> says : <i class="pull-right"><a href="#"><small class="btn btn-xs btn-default">Reply</small></a></i></p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="static/content/strelkov-ava.jpg">
+                                        <div class="post-comments">
+                                            <p class="meta">July 1, 2014 <a href="#">Admin</a> says : <i class="pull-right"><a href="#"><small class="btn btn-xs btn-default">Reply</small></a></i></p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+                                            </p>
+                                        </div>
+                                        <ul class="comments hidden-xs list-unstyled">
+                                            <li class="clearfix">
+                                                <img src="static/content/strelkov-ava.jpg" class="avatar" >
+                                                <div class="post-comments">
+                                                    <p class="meta">July 2, 2014 <a href="#">Admin</a> says : <i class="pull-right"><a href="#"><small class="btn btn-xs btn-default">Reply</small></a></i></p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                        Etiam a sapien odio, sit amet
+                                                    </p>
+                                                </div>
+                                                <ul class="comments list-unstyled">
+                                                    <li class="clearfix">
+                                                        <img src="static/content/strelkov-ava.jpg" class="avatar">
+                                                        <div class="post-comments">
+                                                            <p class="meta">July 3, 2014 <a href="#">Admin</a> says : <i class="pull-right"><a href="#"><small class="btn btn-xs btn-default">Reply</small></a></i></p>
+                                                            <p>
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                                Etiam a sapien odio, sit amet
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="clearfix">
+                                        <img src="static/content/strelkov-ava.jpg" class="avatar">
+                                        <div class="post-comments">
+                                            <p class="meta">July 5, 2014 <a href="#">Admin</a> says : <i class="pull-right"><a href="#"><small class="btn btn-xs btn-default">Reply</small></a></i></p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Etiam a sapien odio, sit amet
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                </div>
+                <!-- end:comments list -->
+                <!-- start:form comment -->
+                <div class="form-comment">
+                  <h3>Form Comments</h3>
+                  <form role="form">
+                    <div class="row">
+                      <div class="form-group col-md-4">
+                        <input class="form-control input-lg" placeholder="Name..">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <input class="form-control input-lg" placeholder="Email..">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <input class="form-control input-lg" placeholder="Url..">
+                      </div>
+                      <div class="form-group col-md-12">
+                        <textarea class="form-control" rows="10" placeholder="Messages.."></textarea>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <button class="btn btn-lg btn-default btn-block">SUBMIT</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- end:form comment -->
+              </div>
+              <!-- end:comments -->
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 right-panel"></div>
+      </div>
+    </div>
+  </div>
+	{% endblock %}
+{% block footer %}{% endblock %}

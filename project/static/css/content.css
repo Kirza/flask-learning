@@ -1,0 +1,89 @@
+.material-card {
+  background: #eeeded;
+	border-radius: 2px;
+}
+
+.material-card {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.material-card:hover {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.19), 0 9px 9px rgba(0,0,0,0.23);
+}
+
+
+#content aside{
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.col-lg-4 {
+	margin: 0;
+	margin-top: 15px;
+}
+
+#content aside img{
+	max-width: 100%;
+	height: 260px;
+}
+
+#content aside .content-title{
+	background-color: #fff;
+	padding: 3px 0px;
+	height: 75px;
+}
+
+#content aside .content-title:hover{
+	background-color: #E1E1E1;
+}
+
+#content aside .content-title h3{
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 14pt;
+	font-family: "Roboto-Regular";
+}
+
+#content aside .content-title a{
+	text-decoration: none;
+	color: #000;
+}
+
+#content aside .content-title a:hover{
+	color: #c62828;
+}
+
+#content aside .content-footer{
+	padding: 4px 4px;
+	background-color: #e5ecee;
+}
+
+#content aside .content-footer img{
+	width: 33px;
+	height: 33px;
+	border-radius: 100%;
+	margin-right: 10px;
+	border: 0px solid #fff;
+}
+
+#content aside .content-footer span.pull-right{
+	margin-top: 0px;
+}
+
+#content aside .content-footer span.pull-right a{
+	color: #999;
+	text-decoration: none;
+}
+
+#content aside .content-footer span.pull-right a:hover{
+	color: #c62828;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	   -moz-transition: all 1s ease;
+	    -ms-transition: all 1s ease;
+	     -o-transition: all 1s ease;
+}
+
+#content aside .content-footer span.pull-right a i.fa{
+	margin-left: 10px;
+}

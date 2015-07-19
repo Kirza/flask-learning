@@ -1,0 +1,94 @@
+#header .title-header p{
+	font-weight: 400;
+}
+
+
+
+#header .header-top{
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 0px 0;
+	margin-bottom: 0px;
+}
+
+#header .header-top .sosmed-header-top i.fa{
+	margin: 0 15px;
+}
+
+#header .header-top .sosmed-header-top i.fa:hover{
+	color: #bdc3c7;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	   -moz-transition: all 1s ease;
+	    -ms-transition: all 1s ease;
+	     -o-transition: all 1s ease;
+}
+
+
+
+#header .slide-header{
+	margin-bottom: 25px;
+}
+
+#header .slide-header h5,
+#header .slide-header h2{
+	font-weight: 600;
+}
+
+#header .button-down i.fa{
+	font-weight: 600;
+	font-size: 18pt;
+}
+
+.navbar.navbar-default{
+	background-color: #212121;
+	border-bottom: 3px solid #e5ebef;
+	margin-bottom: 5px;
+	padding: 8px 0;
+}
+
+.navbar.navbar-default .navbar-brand{
+	color: #fff;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar.navbar-default .navbar-nav>.active>a:hover,
+.navbar.navbar-default .navbar-nav>.active>a:focus{
+	background-color: #212121;
+	color: #B2DFDB;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus{
+	color: #fff;
+	background-color: #c62828;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form{
+	border-color: transparent;
+}
+
+.dropdown-menu{
+	background-color: #c62828;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+	    -ms-box-shadow: none;
+	     -o-box-shadow: none;
+}
+
+.dropdown-menu li a{
+	color: #fff;
+	padding: 10px 20px;
+}
+
+.navbar-default ul.nav li a{
+	font-weight: 400;
+	color: #B2DFDB;
+}
+
+.navbar-default ul.nav li a:hover{
+	color: #616161;
+}
