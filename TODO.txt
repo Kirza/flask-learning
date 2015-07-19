@@ -26,7 +26,6 @@
 ===PostEditor
 ======FrontEnd
 1. Make sweet style
-2. Add text input WYSIWYG
 ======BackEnd
 1.Image processing on upload: wide, thumbnail.
 2. Text, Tag in main body reparsing (non WYSIWYG - Flask-Markdown)
