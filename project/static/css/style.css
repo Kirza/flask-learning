@@ -551,7 +551,7 @@ a:hover{
 }
 
 #content aside .content-title a:hover{
-	color: #616161;
+	color: #c62828;
 }
 
 #content aside .content-footer{
@@ -577,7 +577,7 @@ a:hover{
 }
 
 #content aside .content-footer span.pull-right a:hover{
-	color: #FFC107;
+	color: #c62828;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
 	   -moz-transition: all 1s ease;
