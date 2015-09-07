@@ -2,7 +2,7 @@
 ======FrontEnd
 1. Add Social buttons in navbar. Take from Ruposters.
 ======BackEnd
-1. Break CSS into smart CSS components.
+1. Add valiables to CSS
 2. Migrate CSS to SCSS or Stylus
 3. Roles for users
 
