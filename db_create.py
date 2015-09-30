@@ -11,13 +11,7 @@ db.session.add(User("testpage", "example@example.ru", "letmein"))
 
 # insert data
 
-# db.session.add(BlogPost("Good", "I\'m good."))
-# db.session.add(BlogPost("Well", "I\'m well."))
-# db.session.add(BlogPost("Postgres", "Its alive"))
-# db.session.add(BlogPost("Postgres", "We setup a local postgres database"))
-
-
-db.session.add(BlogPost("Grazd", "First step to answering nazi danger", "This is content # This is anouther line content # End of content $", "Politic", "1"))
+# db.session.add(BlogPost("Test header", "Test header long", "Test content lorepipsumX200", "Test tag", "111111", "http://ya.ru/123.png", "test author auto", "test author manual"))
 
 # commit the changes
 db.session.commit()
