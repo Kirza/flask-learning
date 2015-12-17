@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link href="static/css/post.css" rel="stylesheet" media="screen">
+	<link href="static/css/comments.css" rel="stylesheet" media="screen">
+{% endblock %}
+<body>
+	{% block content %}
+  <!-- start:single blog -->
+  <div id="single-blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 left-panel"></div>
+        <div class="col-lg-8 col-md-8 center-panel material-card">
+          <!-- start:single content -->
+						<h2><center class="post-text-header text-left">{{ post.title_header }}</center></h2>
+						<h3><center class="post-text-header text-left">{{ post.title_long }}</center></h3>
+            <!-- <center><img src={{ post.image_link }} class="img-responsive post-img-header"></center> -->
+            <div class="content-single">
+              <div class="tag">
+                <p>
+                  <span><i class="fa fa-user"></i>
+										{% if author_id_manual != None %}
+											<a href="#">Автор: {{ post.author_name_manual }}</a>
+										{% else %}
+											<a href="#">Автор: {{ post.author.name }}</a>
+										{% endif %}
+									</span>
+                  <i class="fa fa-circle"></i>
+                  <span><i class="fa fa-calendar"></i> <a href="#">{{ post.creation_date[:16] }}</a></span>
+                  <i class="fa fa-circle"></i>
+                  <span><i class="fa fa-tag"></i> <a href="#">{{ post.tag }}</a></span>
+                </p>
+              </div>
+              <div class="hr-single"></div>
+                  <p> {{ content|safe }} </p> <br>
+                <br>
+              <div class="hr-single"></div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 right-panel"></div>
+      </div>
+    </div>
+  </div>
+	{% endblock %}
+{% block footer %}{% endblock %}

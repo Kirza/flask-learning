@@ -39,7 +39,7 @@ def preview():
 @login_required
 def blog():
     posts = db.session.query(BlogPost).all()
-    return render_template('blog.html', posts=posts)  # render a template
+    return render_template('blog_slim.html', posts=posts)  # render a template
 
 
 @home_blueprint.route('/<int:post_id>')
@@ -49,7 +49,16 @@ def post_generate(post_id):
     content = post.content
     content = content.replace("\r", " </p> ", 40)
     content = content.replace("\n", " <p> ", 40)
-    return render_template('post.html', post=post, content=content)
+    return render_template('post_nocom.html', post=post, content=content)
+
+# @home_blueprint.route('/<int:post_id>/')
+# @login_required
+# def post_generate(post_id):
+#     post = db.session.query(BlogPost).filter(BlogPost.id == post_id).first()
+#     content = post.content
+#     content = content.replace("\r", " </p> ", 40)
+#     content = content.replace("\n", " <p> ", 40)
+#     return render_template('post.html', post=post, content=content)
 
 @home_blueprint.route('/create', methods=['GET', 'POST'])
 @login_required
