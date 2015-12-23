@@ -63,7 +63,6 @@ def post_generate(post_id):
 @home_blueprint.route('/create', methods=['GET', 'POST'])
 @login_required
 def create():
-    error = None
     date = datetime.datetime.now()
     form = BlogPostForm()
     if form.validate_on_submit():
